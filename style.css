@@ -43,7 +43,8 @@ background-color: rgb(255, 255, 255);
 #banner-text{
     font-family: 'Sketchy';
     font-size: 300px;
-    text-shadow: 10px 10px rgb(105, 63, 255);
+   /* text-shadow: 10px 10px rgb(105, 63, 255);*/
+   text-shadow: 5px 5px rgb(121, 121, 122);
     background-color: rgba(255, 255, 255, 0);
       -webkit-user-select: none;  
   -moz-user-select: none;    
@@ -94,5 +95,53 @@ border-radius: 10px;
     color: white;
 
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+:root {
+  --width: 40px;
+  --x-speed: 13s;
+  --y-speed: 7s;
+  --transition-speed: 2.2s;
+}
+.blob { 
+  width: var(--width);
+  height: var(--width);
+  background: #1a1a1a;
+  transition: border-radius var(--transition-speed) linear;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+}
+.blob-2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.blob-2 .blob {
+  background: #B0BEC5;
+}
+.x {
+  animation: x var(--x-speed) linear infinite alternate;
+}
+.x2 {
+  animation: x2 var(--x-speed) linear infinite alternate;
+}
+.y {
+  animation: y var(--y-speed) linear infinite alternate;
+}
+
+@keyframes x {
+  100% {
+    transform: translateX(calc(500px - var(--width)));
+  }
+}
+@keyframes x2 {
+  100% {
+    transform: translateX(calc(-500px + var(--width)));
+  }
+}
+
+@keyframes y {
+  100% {
+    transform: translateY(calc(500px - var(--width)));
+  }
 }
 
