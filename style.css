@@ -8,29 +8,27 @@ body{
     margin: 0;
 }
 .container{
-    display: flex;
-    flex-direction: column;
+    display: flex; 
+    flex-direction: column; 
     justify-content: space-evenly;
 }
 
 #banner-background{
     background: linear-gradient(28deg,#ffffff, #ffffff);
-    height:1000px;
-    width: 100%;
-    vertical-align: bottom;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 100vw;
+    height: 90vh;
+  }
+
+#banner-logo{
+    
+    color: rgb(0, 0, 0);
     
 }
 
-#banner-logo{
-  
-    display: flex;
-   
-    color: rgb(0, 0, 0);
-    justify-content: center;
-    align-items: center;
+#banner-text{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 #myCanvas{
 background-color: rgb(255, 255, 255);
@@ -71,8 +69,8 @@ background-color: rgb(255, 255, 255);
       box-shadow: 0 0 5px 0 ;
       background: inherit;
       backdrop-filter: blur(10px);
-    border-radius: 10px;
-    padding: 10px;
+      border-radius: 10px;
+      padding: 10px;
 }
 
 .second-container{
@@ -101,23 +99,23 @@ flex-direction: column;
 :root {
   --width: 40px;
   --x-speed: 13s;
-  --y-speed: 7s;
+  --y-speed: 5s;
   --transition-speed: 2.2s;
 }
 .blob { 
   width: var(--width);
   height: var(--width);
-  background: #90A4AE;
+  background: #1d1d1d;
   transition: border-radius var(--transition-speed) linear;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
 }
 .blob-2 {
-  position: absolute;
+  /* position: absolute;
   top: 0;
-  right: 0;
+  right: 0; */
 }
 .blob-2 .blob {
-  background: #B0BEC5;
+  background: #1d1d1d;
 }
 .x {
   animation: x var(--x-speed) linear infinite alternate;
@@ -136,13 +134,13 @@ flex-direction: column;
 }
 @keyframes x2 {
   100% {
-    transform: translateX(calc(-100vw + var(--width)));
+    transform: translateX(calc(100vw+var(--width)));
   }
 }
 
 @keyframes y {
   100% {
-    transform: translateY(calc(500px - var(--width)));
+    transform: translateY(calc(90vh - var(--width)));
   }
 }
 

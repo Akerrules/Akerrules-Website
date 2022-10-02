@@ -68,13 +68,24 @@ document.addEventListener('DOMContentLoaded', function() {
     
 // }
 
+
+
+//for loop to create more blob
+const rootBlobParent = document.getElementById("banner-logo");
+const blobObject =  document.getElementsByClassName("blob-wrap x")[0];
+for (var i = 0; 100>i; i++){
+  clone = blobObject.cloneNode(true);
+  console.log("adding blob");
+rootBlobParent.appendChild(clone);
+}
 const blobs = document.querySelectorAll(".blob");
 console.log(document.querySelectorAll(".blob"));
+
 let last = 0;
 let changeSpeed = 1500;
 let rAF;
 
-function render(now) {
+function render(now) { //blob effect
  if (!last || now - last >= changeSpeed) {
     last = now;
     blobs.forEach(blob => {
@@ -93,6 +104,8 @@ const random = () => {
 };
  
 render(last);
+
+
 
 
 
