@@ -15,40 +15,34 @@ body{
 
 #banner-background{
     background: linear-gradient(28deg,#ffffff, #ffffff);
-    width: 100vw;
-    height: 90vh;
+    height: 100vh;
+   max-width: 100%;
   }
 
 #banner-logo{
     
     color: rgb(0, 0, 0);
+    display: flex;
+    justify-content:  center;
     
 }
 
-#banner-text{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 #myCanvas{
 background-color: rgb(255, 255, 255);
-
-  position: absolute; 
- 
+   position:absolute;
 
 }
 
 #banner-text{
     font-family: 'Sketchy';
     font-size: 300px;
-   /* text-shadow: 10px 10px rgb(105, 63, 255);*/
-   text-shadow: 5px 5px rgb(121, 121, 122);
+   /* text-shadow: 5px 5px rgb(121, 121, 122); */
+    text-shadow: 5px 5px rgb(255, 164, 90);
     background-color: rgba(255, 255, 255, 0);
-      -webkit-user-select: none;  
-  -moz-user-select: none;    
-  -ms-user-select: none;      
+  
   user-select: none;
-    z-index: 1;
+    position: absolute;
 }
 
 #nav{
@@ -109,12 +103,10 @@ flex-direction: column;
   transition: border-radius var(--transition-speed) linear;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
 }
-.blob-2 {
-  /* position: absolute;
-  top: 0;
-  right: 0; */
+.blob-2.blob-1{
+  position: absolute;
 }
-.blob-2 .blob {
+.blob-2.blob {
   background: #1d1d1d;
 }
 .x {
@@ -134,13 +126,13 @@ flex-direction: column;
 }
 @keyframes x2 {
   100% {
-    transform: translateX(calc(100vw+var(--width)));
+    transform: translateX(calc(100vw - var(--width)));
   }
 }
 
 @keyframes y {
   100% {
-    transform: translateY(calc(90vh - var(--width)));
+    transform: translateY(calc(100vh - var(--width)));
   }
 }
 
