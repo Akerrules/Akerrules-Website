@@ -1,71 +1,4 @@
 
-// document.addEventListener('DOMContentLoaded', function() {
-// bannerDots();
-
-// }, false);
-//   let point_list = [];
-// function bannerDots(){
-//     var c = document.getElementById("myCanvas");
-     
-//      c.height = window.innerHeight;
-//      c.width=window.innerWidth-(window.innerHeight*0.05);
-//      let ctx =  c.getContext("2d");
-//     let maxHeight = c.getBoundingClientRect().height;
-//     let maxWidth = c.getBoundingClientRect().width;
-//     console.log(maxHeight)
-//     let x;
-//     let y;
-  
-//     //const dotElem = document.getElementById('dots');
-//   //  const parentElem = document.getElementById('banner-background')
-//     for(let i = 0; i<maxWidth/10; i++){
-//         x = Math.floor(Math.random() * maxWidth);
-
-//         y = Math.floor(Math.random() * maxHeight);
-//         ctx.beginPath();
-//         point_list.push([x,y]);
-//      ctx.arc(x, y, 5, 0,2*Math.PI);
-//         ctx.stroke();
-//         ctx.fill();
-//     }
-//     let i=0;
-//  ctx.clearRect(0,0,maxWidth,maxHeight);
-     
-// }
-
-// renderer.setAnimationLoop(function ()  {
-
-//  var c = document.getElementById("myCanvas");
-    
-//     let ctx =  c.getContext("2d");
-//     let maxHeight = c.getBoundingClientRect().height;
-//     let maxWidth = c.getBoundingClientRect().width;
-   
-//       ctx.beginPath();
-//        let   direction = Math.floor(Math.random() * 10);
-//     if(i>=point_list.length){
-//        ctx.clearRect(0,0,maxWidth,maxHeight);
-//         i=0;
-//     }
-    
-//     if(direction<=5){
-//         ctx.arc(point_list[i][0], point_list[i][1], 5, 0,2*Math.PI);
-//        point_list[i][0]=point_list[i][0]+1;
-//    }else{
-//         ctx.arc(point_list[i][0], point_list[i][1], 5, 0,2*Math.PI);
-// point_list[i][1]=point_list[i][1]+1;
-
-//    }
-//      i++
-//         ctx.stroke();
-//         ctx.fill();
-//      setTimeout(() => {
-//     requestAnimationFrame(moveTest);
-//   }, 1000 / 100);
-
-    
-// })
-
 addEventListener('resize', (event) => {});
 
 onresize = (event) => {};
@@ -116,7 +49,9 @@ class Circle{
     draw(context){
         context.beginPath();
         context.arc(this.xpos, this.ypos, this.radius, 0, Math.PI * 2, false);
+      context.fillStyle = this.color;
         context.fill();
+      
         context.closePath();
     }
     update(){
@@ -149,11 +84,11 @@ let randomNumber = function(min, max) {
 let list_Of_Blob = [];
 
     //let radius = 20;
-    let numOfBlob = 100;
+    let numOfBlob = Math.round(window_width*0.15);
 for (var i = 0; i<numOfBlob; i++){
    let speed = randomNumber(5, 10);
     var alternator = randomNumber(0,10);
-    var radius = randomNumber(5,20);
+    var radius = randomNumber((window_width*0.001),(window_width*0.005));
  
   (alternator<5)? speed = -speed : speed;
     let my_circle = new Circle(radius, "black", speed/10);

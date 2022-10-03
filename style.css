@@ -3,6 +3,21 @@
     src: url(Sketching.otf) ;
     font-weight: normal;
 }
+@font-face {
+    font-family: "levi";
+    src: url(LEVIBRUSH.TTF) ;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "brushStrike";
+    src: url(Brushstrike\ trial.ttf) ;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "pinkblue";
+    src: url(Pink\ Blue.ttf) ;
+    font-weight: normal;
+}
 body{
       display: block;
     margin: 0;
@@ -20,23 +35,28 @@ body{
   }
 
 #banner-logo{
-    color: rgb(0 0 0);
+    color: rgb(255, 251, 223);
     display: flex;
     justify-content:  center;
+    width: inherit;
+    height: inherit;
+    align-items: center;
 }
 
 
 #myCanvas{background-color: rgb(255 255 255);position:absolute;}
 
 #banner-text{
-    font-family: 'Sketchy';
-    font-size: 300px;
+    font-family: 'pinkblue';
+    font-size: 20vw;
+    justify-self: center;
+    align-items: center;
     /* text-shadow: 5px 5px rgb(121, 121, 122); */
+    text-shadow: -20px -20px 0 #000, 20px -20px 0 #000, -20px 20px 0 #000, 20px 20px 0 #000;
     /* text-shadow: 5px 5px rgb(255, 164, 90); */
     background-color: rgb(255 255 255 / 0%);
     /* user-select: none; */
     z-index: 3;
-    position: absolute;
 }
 
 #nav{
@@ -63,7 +83,8 @@ body{
 
 .second-container{
 background: rgb(27, 27, 27);
-
+height: 100%;
+padding-bottom: 10%;
  display: flex;
 flex-direction: column;
 /*padding: 10px;*/
