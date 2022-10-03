@@ -93,7 +93,7 @@ canvas.height = window_height;
 // context.closePath();
 
 class Circle{
-     pulse = false;
+
     randomMin_Max(min, max) {
       return Math.random() * (max - min) + min;
      }
@@ -105,6 +105,7 @@ class Circle{
         this.color = color;
         this.speed = speed;
         this.dx = 1 * speed;
+        this.pulse = true;
         this.dy = 1 * speed;
          this.xpos = Math.random() * (window_width - this.radius) + this.radius;;
       
@@ -115,16 +116,17 @@ class Circle{
     draw(context){
         context.beginPath();
         context.arc(this.xpos, this.ypos, this.radius, 0, Math.PI * 2, false);
-        context.stroke();
         context.fill();
         context.closePath();
     }
     update(){
          // let alternator = randomMin_Max(0,10);
-        if(this.orignalRad/this.radius<=1 && this.orignalRad/this.radius>=0.50){
+         if(this.orignalRad/this.radius >= 1){this.pulse = true; this.radius = this.orignalRad;}
+        if(this.orignalRad/this.radius<=1 && this.orignalRad/this.radius>=0.50 && this.pulse){
           this.radius+=0.1;
-        }else if(this.orignalRad/this.radius<0.50){
-          this.radius -=1;
+        }else{
+          this.radius -=0.1;
+          this.pulse = false;
          
         }
         this.draw(context);
