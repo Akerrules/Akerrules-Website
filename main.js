@@ -163,3 +163,31 @@ document.getElementById("nav-projects").addEventListener("click", goToProject, f
 
 
 
+
+canvasFooter = document.getElementById("footer-canvas");
+canvasFooter.width = window.innerWidth*0.99;
+const ctx = canvasFooter.getContext('2d')
+let increment = 0
+let amplitude = 50
+let freq = 0;
+let y= canvasFooter.height /1.5
+
+function drawSineWave() {
+  ctx.clearRect(0, 0, canvasFooter.width, canvasFooter.height)
+  increment++
+  ctx.beginPath()
+  for (let i = 0; i < canvasFooter.width; i++) {
+    ctx.lineTo(i, y + Math.sin(increment / 50) * amplitude * Math.sin(i * 0.02 + freq))
+  }
+
+  ctx.lineTo(canvasFooter.width, canvasFooter.height) // bottom right
+  ctx.lineTo(0, canvasFooter.height)         
+  ctx.fillStyle = "black"// bottom left
+  ctx.fill()
+}
+function animate() {
+  requestAnimationFrame(animate)
+  drawSineWave()
+}
+animate();
+

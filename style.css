@@ -182,7 +182,9 @@ li.nav-link:hover{
   width: 100%;
   background-color: white;
 }
-.text2{
+.nav-text{
   color:white
 }
-
+#footer-canvas{
+  position: absolute;
+}
