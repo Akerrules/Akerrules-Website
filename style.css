@@ -28,7 +28,6 @@ body {
   justify-content: space-evenly;
 }
 
-<<<<<<< HEAD
 #banner-background{
     background: linear-gradient(28deg,#ffffff, #ffffff);
     height: 100vh;
@@ -86,16 +85,15 @@ li.nav-link:hover{
 
 }
 .homepage{
-  background-image: ;
+ 
 }
 .nav-link{
       box-shadow: 0 0 5px 0 ;
       background: inherit;
       backdrop-filter: blur(10px);
       border-radius: 10px;
-      padding: 10px;
+      padding: 10px;}
       
-=======
 #banner-background {
   background: linear-gradient(28deg, #ffffff, #ffffff);
   height: 100vh;
@@ -128,7 +126,6 @@ li.nav-link:hover{
   background-color: rgb(255 255 255 / 0%);
   user-select: none;
   z-index: 3;
->>>>>>> 338981c66146b8efde524d6021d29e5ce3d6dc61
 }
 
 #nav {
@@ -172,53 +169,3 @@ li.nav-link:hover{
 
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
-
-<<<<<<< HEAD
-
-=======
-:root {
-  --width: 40px;
-  --x-speed: 13s;
-  --y-speed: 5s;
-  --transition-speed: 2.2s;
-}
-.blob {
-  width: var(--width);
-  height: var(--width);
-  background: #1d1d1d;
-  transition: border-radius var(--transition-speed) linear;
-  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
-}
-.blob-2.blob-1 {
-  position: absolute;
-}
-.blob-2.blob {
-  background: #1d1d1d;
-}
-.x {
-  animation: x var(--x-speed) linear infinite alternate;
-}
-.x2 {
-  animation: x2 var(--x-speed) linear infinite alternate;
-}
-.y {
-  animation: y var(--y-speed) linear infinite alternate;
-}
-
-@keyframes x {
-  100% {
-    transform: translateX(calc(100vw - var(--width)));
-  }
-}
-@keyframes x2 {
-  100% {
-    transform: translateX(calc(100vw - var(--width)));
-  }
-}
-
-@keyframes y {
-  100% {
-    transform: translateY(calc(100vh - var(--width)));
-  }
-}
->>>>>>> 338981c66146b8efde524d6021d29e5ce3d6dc61
