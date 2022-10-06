@@ -157,9 +157,13 @@ let  goToProject = function(){
 let  goToAboutme = function(){
   scrollToDiv(document.getElementById("about-me"));
 }
+let  goToUpcoming= function(){
+  scrollToDiv(document.getElementById("upcoming"));
+}
 
 document.getElementById("nav-about-me").addEventListener("click", goToAboutme, false)
 document.getElementById("nav-projects").addEventListener("click", goToProject, false)
+document.getElementById("nav-upcoming").addEventListener("click", goToUpcoming, false)
 
 
 
