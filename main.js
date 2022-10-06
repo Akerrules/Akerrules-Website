@@ -163,9 +163,9 @@ document.getElementById("nav-projects").addEventListener("click", goToProject, f
 
 
 
-
+footer = document.getElementById("footer");
 canvasFooter = document.getElementById("footer-canvas");
-canvasFooter.width = window.innerWidth*0.99;
+canvasFooter.width = footer.offsetWidth;
 const ctx = canvasFooter.getContext('2d')
 let increment = 0
 let amplitude = 50
