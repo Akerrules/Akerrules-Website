@@ -145,3 +145,21 @@ const random = () => {
 };
 
 render(last);
+
+
+window.scrollToDiv = function(target){
+  target.scrollIntoView({behavior: "smooth"});
+}
+
+let  goToProject = function(){
+  scrollToDiv(document.getElementById("projects"));
+}
+let  goToAboutme = function(){
+  scrollToDiv(document.getElementById("about-me"));
+}
+
+document.getElementById("nav-about-me").addEventListener("click", goToAboutme, false)
+document.getElementById("nav-projects").addEventListener("click", goToProject, false)
+
+
+
