@@ -195,3 +195,28 @@ function animate() {
 }
 animate();
 
+
+let section = document.getElementsByClassName("second-container");
+
+var isInViewport = function (elem) {
+    var bounding = elem.getBoundingClientRect();
+   //console.log(  bounding.top<=100 );
+    return (
+        (bounding.top <=80  && bounding.top >=0 ) && (window.innerHeight/ bounding.bottom<1 || window.innerHeight/ bounding.bottom>0.75)
+  
+    );
+};
+window.addEventListener('scroll', function (event) {
+  //console.log(section[0].getBoundingClientRect().bottom+" "+window.innerHeight)
+if(event.isTrusted){
+
+	for(let i=0;i<section.length;i++){
+    if(isInViewport(section[i])){
+  console.log(i);
+        section[i].scrollIntoView({behavior: "smooth"});
+       // console.log(section[i].className)
+       break;
+    }
+  }}
+
+}, false);
