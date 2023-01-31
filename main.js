@@ -87,7 +87,7 @@ let randomNumber = function (min, max) {
 let list_Of_Blob = [];
 
 //let radius = 20;
-let numOfBlob = Math.round(window_width * 0.15);
+let numOfBlob = Math.round(window_width * 0);
 for (var i = 0; i < numOfBlob; i++) {
   let speed = randomNumber(1, 5);
   var alternator = randomNumber(0, 10);
@@ -146,77 +146,82 @@ const random = () => {
 
 render(last);
 
+window.scrollToDiv = function (target) {
+  target.scrollIntoView();
+};
 
-window.scrollToDiv = function(target){
-  target.scrollIntoView({behavior: "smooth"});
-}
-
-let  goToProject = function(){
+let goToProject = function () {
   scrollToDiv(document.getElementById("projects"));
-}
-let  goToAboutme = function(){
+};
+let goToAboutme = function () {
   scrollToDiv(document.getElementById("about-me"));
-}
-let  goToUpcoming= function(){
+};
+let goToUpcoming = function () {
   scrollToDiv(document.getElementById("upcoming"));
-}
+};
 
-document.getElementById("nav-about-me").addEventListener("click", goToAboutme, false)
-document.getElementById("nav-projects").addEventListener("click", goToProject, false)
-document.getElementById("nav-upcoming").addEventListener("click", goToUpcoming, false)
-
-
+document
+  .getElementById("nav-about-me")
+  .addEventListener("click", goToAboutme, false);
+document
+  .getElementById("nav-projects")
+  .addEventListener("click", goToProject, false);
+document
+  .getElementById("nav-upcoming")
+  .addEventListener("click", goToUpcoming, false);
 
 footer = document.getElementById("footer");
 canvasFooter = document.getElementById("footer-canvas");
 canvasFooter.width = footer.offsetWidth;
-const ctx = canvasFooter.getContext('2d')
-let increment = 0
-let amplitude = 50
+const ctx = canvasFooter.getContext("2d");
+let increment = 0;
+let amplitude = 50;
 let freq = 0;
-let y= canvasFooter.height /1.5
+let y = canvasFooter.height / 1.5;
 
 function drawSineWave() {
-  ctx.clearRect(0, 0, canvasFooter.width, canvasFooter.height)
-  increment++
-  ctx.beginPath()
+  ctx.clearRect(0, 0, canvasFooter.width, canvasFooter.height);
+  increment++;
+  ctx.beginPath();
   for (let i = 0; i < canvasFooter.width; i++) {
-    ctx.lineTo(i, y + Math.sin(increment / 50) * amplitude * Math.sin(i * 0.02 + freq))
+    ctx.lineTo(
+      i,
+      y + Math.sin(increment / 50) * amplitude * Math.sin(i * 0.02 + freq)
+    );
   }
 
-  ctx.lineTo(canvasFooter.width, canvasFooter.height) // bottom right
-  ctx.lineTo(0, canvasFooter.height)         
-  ctx.fillStyle = "black"// bottom left
-  ctx.fill()
+  ctx.lineTo(canvasFooter.width, canvasFooter.height); // bottom right
+  ctx.lineTo(0, canvasFooter.height);
+  ctx.fillStyle = "black"; // bottom left
+  ctx.fill();
 }
 function animate() {
-  requestAnimationFrame(animate)
-  drawSineWave()
+  requestAnimationFrame(animate);
+  drawSineWave();
 }
 animate();
 
+// let section = document.getElementsByClassName("second-container");
 
-let section = document.getElementsByClassName("second-container");
+// var isInViewport = function (elem) {
+//     var bounding = elem.getBoundingClientRect();
+//    //console.log(  bounding.top<=100 );
+//     return (
+//         (bounding.top <=80  && bounding.top >=0 ) && (window.innerHeight/ bounding.bottom<1 || window.innerHeight/ bounding.bottom>0.75)
 
-var isInViewport = function (elem) {
-    var bounding = elem.getBoundingClientRect();
-   //console.log(  bounding.top<=100 );
-    return (
-        (bounding.top <=80  && bounding.top >=0 ) && (window.innerHeight/ bounding.bottom<1 || window.innerHeight/ bounding.bottom>0.75)
-  
-    );
-};
-window.addEventListener('scroll', function (event) {
-  //console.log(section[0].getBoundingClientRect().bottom+" "+window.innerHeight)
-if(event.isTrusted){
+//     );
+// };
+// window.addEventListener('scroll', function (event) {
+//   //console.log(section[0].getBoundingClientRect().bottom+" "+window.innerHeight)
+// if(event.isTrusted){
 
-	for(let i=0;i<section.length;i++){
-    if(isInViewport(section[i])){
-  console.log(i);
-        section[i].scrollIntoView({behavior: "smooth"});
-       // console.log(section[i].className)
-       break;
-    }
-  }}
+// 	for(let i=0;i<section.length;i++){
+//     if(isInViewport(section[i])){
+//   console.log(i);
+//         section[i].scrollIntoView({behavior: "smooth"});
+//        // console.log(section[i].className)
+//        break;
+//     }
+//   }}
 
-}, false);
+// }, false);

@@ -1,86 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <link rel = "stylesheet" href ="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500&display=swap&effect=fire" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Rancho&effect=shadow-multiple" rel ="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Alkalami&display=swap" rel="stylesheet">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500&display=swap&effect=fire"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Rancho&effect=shadow-multiple"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alkalami&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap"
+      rel="stylesheet"
+    />
     <title>Aker</title>
-    
-</head>
+  </head>
 
-<body>
-
-    <div class="container">
-        <div id ="nav">
-            <ul id ="nav-bar">
-                <li class="nav-link noselect homepage" id = "nav-home" ><a class="nav-text">Home</a></li>
-        
-                <li class="nav-link noselect" id = "nav-about-me"><a class="nav-text">About Me</a></li>  
-                <li class="nav-link noselect" id = "nav-projects"><a class = "nav-text">Projects</a></li>
-                <li class="nav-link noselect" id = "nav-upcoming"><a class = "nav-text">Upcoming</a></li>
-            </ul>
-        </div>
-        <div id = "banner-background">
+  <body>
+    <div class="scroll-container">
+      <div class="scroll-area Home">
+        <div id="canva-banner">
+          <div id="banner-background">
             <div id="banner-logo">
-                     <canvas  id="myCanvas"></canvas>  
-              <!-- <div class="blob-wrap blob-1 x">
-                <div class="blob y"></div>
-            </div>   
-            <div class="blob-wrap blob-2 x2">
-                    <div class="blob y"></div>
-            </div> -->
-            <!-- <p class = "noselect" id="banner-text" >Aker</p> -->
-            <div id = "banner-text">
-                <img src="images/Aker.png"  style = "max-width:1000px; max-height:1000px;    filter: none;" alt="" >
-            </div>
-            </div>
-        </div>
-       <section  class="second-container"  id = "about-me" style="background:rgb(22, 22, 22)">
-        <p class="title-text">About me</p>
-        <div class = "content">
-        <p class = "normal-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et d
-                            olore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
-                            commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
-                            fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt 
-                            in culpa qui officia deserunt mollit anim id est laborum.</p>
-         <img src="images/computer-screeen.png" width = "447px" height = "293"  style = "max-width:500px; max-height:500px;"alt="computerscreen">
-     <img src="images/movie-clapper.png" width = "362px" height = "409" style = "max-width:500px; max-height:500px;" max-height:500px; alt="computerscreen">
+              <canvas id="myCanvas"></canvas>
 
+              <div id="banner-text">
+                <img
+                  src="images/Aker.png"
+                  style="max-width: 1000px; max-height: 1000px; filter: none"
+                  alt=""
+                />
+                <div id="nav">
+                  <ul id="nav-bar">
+                    <li class="nav-link noselect homepage" id="nav-home">
+                      <a class="nav-text">Home</a>
+                    </li>
+
+                    <li class="nav-link noselect" id="nav-about-me">
+                      <a class="nav-text">About Me</a>
+                    </li>
+                    <li class="nav-link noselect" id="nav-projects">
+                      <a class="nav-text">Projects</a>
+                    </li>
+                    <li class="nav-link noselect" id="nav-upcoming">
+                      <a class="nav-text">Upcoming</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      
-       </section>
-        
-        <section  class="second-container"  id = "projects"style="background:rgb(255 57 57 / 85%)">
-            
+      <div
+        class="scroll-area test"
+        id="about-me"
+        style="background: rgb(22 22 22 / 85%)"
+      >
+        <p class="title-text">About me</p>
+        <div class="content">
+          <p class="normal-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et d olore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+          <img
+            src="images/computer-screeen.png"
+            width="447px"
+            height="293"
+            style="max-width: 500px; max-height: 500px"
+            alt="computerscreen"
+          />
+          <img
+            src="images/movie-clapper.png"
+            width="362px"
+            height="409"
+            style="max-width: 500px; max-height: 500px"
+            max-height:500px;
+            alt="computerscreen"
+          />
+        </div>
+      </div>
+      <div
+        class="scroll-area test"
+        id="projects"
+        style="background: rgb(255 57 57 / 85%)"
+      >
         <p class="title-text">Projects</p>
-        <p class = "normal-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et d
-                            olore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
-                            commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
-                            fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt 
-                            in culpa qui officia deserunt mollit anim id est laborum.</p>
-      
-       </section>
-        <section  class="second-container" id="upcoming" style="background:rgb(53 152 255)">
+        <p class="normal-text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et d olore magna aliqua. Ut enim
+          ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+      </div>
+      <div
+        class="scroll-area test"
+        id="upcoming"
+        style="background: rgb(53 152 255 / 85%)"
+      >
         <p class="title-text">Upcoming</p>
-        <p class = "normal-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et d
-                            olore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
-                            commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
-                            fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt 
-                            in culpa qui officia deserunt mollit anim id est laborum.</p>
-      
-       </section>
-        
-</body>
-<footer>
-    <div id="footer">
-        <canvas id= "footer-canvas"></canvas>
+        <p class="normal-text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et d olore magna aliqua. Ut enim
+          ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+      </div>
     </div>
-    
-     <script src ="main.js"></script>
- 
-</footer>
+  </body>
+  <footer>
+    <div id="footer">
+      <canvas id="footer-canvas"></canvas>
+    </div>
+
+    <script src="main.js"></script>
+  </footer>
 </html>
