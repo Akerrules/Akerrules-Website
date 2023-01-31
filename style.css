@@ -117,22 +117,24 @@ body {
   width: 25%;
   display: flex;
   background-color: #171717;
-  /* filter: drop-shadow(0 0 0.75rem white); */
+  filter: drop-shadow(0 0 0.75rem black);
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  overflow: hidden;
 }
 #profilPic {
   border-radius: 100%;
   height: 200px;
   width: 200px;
-  /* margin-top: 30%; */
-  /* align-self: center; */
-  /* justify-self: center; */
-  background: white;
+  /* height: 100vh;
+  width: 100%; */
+  background-image: url("/images/profile-pic.PNG");
+  background-size: cover;
   /* padding: 100px; */
   /* position: absolute; */
   /* z-index: 10; */
+  background-color: rgba(255, 255, 255, 0.118);
 }
 .nav {
   width: 100%;
@@ -168,7 +170,7 @@ body {
 
 #banner-background {
   /* background: #54c581a8; */
-  background-image: url(images/lofi.jpg);
+  background-image: url("images/lofi.jpg");
   background-size: cover;
   /* object-fit: cover; */
   height: 100vh;
